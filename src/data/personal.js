@@ -2,7 +2,7 @@ export const personal = {
   name: "Aravind Reddy",
   fullName: "Beeravelli Aravind Reddy",
   role: "Full Stack Developer",
-  tagline: "I turn complex data products into fast, clean UIs — and own the backend that makes it possible.",
+  tagline: "I ship full-stack features end-to-end — real-time backends, production UIs, and the architecture that scales.",
   location: "Hyderabad, India",
   email: "aravindreddy.beeravelli123@gmail.com",
   phone: "+91 9381373847",
