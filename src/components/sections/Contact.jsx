@@ -56,6 +56,7 @@ export function Contact() {
       style={{
         position: 'relative',
         zIndex: 2,
+        overflow: 'hidden',
         background: 'linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%)',
       }}
     >

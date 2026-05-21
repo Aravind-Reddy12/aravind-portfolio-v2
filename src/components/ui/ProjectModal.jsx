@@ -48,8 +48,9 @@ export function ProjectModal({ project, onClose }) {
           background: 'rgba(0,0,0,0.75)',
           backdropFilter: 'blur(10px)',
           WebkitBackdropFilter: 'blur(10px)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          padding: '1rem',
+          display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
+          padding: '80px 1rem 1rem',
+          overflowY: 'auto',
         }}
       >
         <motion.div
@@ -61,10 +62,10 @@ export function ProjectModal({ project, onClose }) {
           onClick={(e) => e.stopPropagation()}
           style={{
             width: '100%', maxWidth: '680px',
-            maxHeight: '88vh',
             borderRadius: '1.25rem',
             overflow: 'hidden',
             display: 'flex', flexDirection: 'column',
+            flexShrink: 0,
             background: 'var(--bg-secondary)',
             border: `1px solid ${project.color}50`,
             boxShadow: `0 0 60px ${project.color}20, 0 24px 80px rgba(0,0,0,0.6)`,
@@ -143,7 +144,7 @@ export function ProjectModal({ project, onClose }) {
           </div>
 
           {/* ── Scrollable body ───────────────────────────── */}
-          <div className="modal-body-pad" style={{ overflowY: 'auto', flex: 1 }}>
+          <div className="modal-body-pad" style={{ flex: 1 }}>
 
             <p style={{
               fontFamily: '"Satoshi", sans-serif', fontSize: '0.95rem',

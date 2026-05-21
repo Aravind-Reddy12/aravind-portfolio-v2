@@ -28,7 +28,7 @@ export function Projects() {
   const close = () => setActive(null);
 
   return (
-    <section id="projects" className="section-pad" style={{ position: 'relative', zIndex: 2 }}>
+    <section id="projects" className="section-pad" style={{ position: 'relative', zIndex: 2, overflow: 'hidden' }}>
       {/* Ambient warm glow — bottom-left */}
       <div aria-hidden="true" style={{
         position: 'absolute', bottom: '5%', left: '-5%',

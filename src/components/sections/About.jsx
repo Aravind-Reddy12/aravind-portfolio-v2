@@ -14,7 +14,7 @@ const itemVariants = {
 
 export function About() {
   return (
-    <section id="about" className="section-pad" style={{ position: 'relative', zIndex: 2 }}>
+    <section id="about" className="section-pad" style={{ position: 'relative', zIndex: 2, overflow: 'hidden' }}>
       {/* Background number */}
       <div aria-hidden="true" style={{
         position: 'absolute', right: '2rem', top: '2rem',
