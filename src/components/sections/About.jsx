@@ -26,9 +26,9 @@ export function About() {
       {/* Ambient purple glow — top-right */}
       <div aria-hidden="true" style={{
         position: 'absolute', top: '-10%', right: '-5%',
-        width: '500px', height: '500px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(157,141,241,0.07) 0%, transparent 65%)',
-        filter: 'blur(40px)', pointerEvents: 'none',
+        width: '600px', height: '600px', borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(157,141,241,0.07) 0%, rgba(157,141,241,0.02) 50%, transparent 70%)',
+        pointerEvents: 'none',
       }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

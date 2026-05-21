@@ -66,23 +66,20 @@ export function Contact() {
         <div style={{
           position: 'absolute', top: '50%', left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: '700px', height: '500px', borderRadius: '50%',
-          background: 'radial-gradient(ellipse, rgba(0,245,212,0.13) 0%, transparent 65%)',
-          filter: 'blur(30px)',
+          width: '900px', height: '700px', borderRadius: '50%',
+          background: 'radial-gradient(ellipse, rgba(0,245,212,0.11) 0%, rgba(0,245,212,0.04) 45%, transparent 70%)',
         }} />
         {/* Purple blob — top-right */}
         <div style={{
           position: 'absolute', top: '-5%', right: '-5%',
-          width: '450px', height: '450px', borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(157,141,241,0.1) 0%, transparent 65%)',
-          filter: 'blur(50px)',
+          width: '600px', height: '600px', borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(157,141,241,0.09) 0%, rgba(157,141,241,0.02) 50%, transparent 70%)',
         }} />
         {/* Warm blob — bottom-left */}
         <div style={{
           position: 'absolute', bottom: '-10%', left: '-5%',
-          width: '400px', height: '400px', borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,107,107,0.07) 0%, transparent 65%)',
-          filter: 'blur(50px)',
+          width: '550px', height: '550px', borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(255,107,107,0.07) 0%, rgba(255,107,107,0.02) 50%, transparent 70%)',
         }} />
       </div>
 

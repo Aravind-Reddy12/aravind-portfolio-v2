@@ -49,16 +49,16 @@ export function Skills() {
       {/* Ambient teal glow — bottom-left */}
       <div aria-hidden="true" style={{
         position: 'absolute', bottom: '0%', left: '-5%',
-        width: '500px', height: '500px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(0,245,212,0.06) 0%, transparent 65%)',
-        filter: 'blur(50px)', pointerEvents: 'none',
+        width: '650px', height: '650px', borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(0,245,212,0.07) 0%, rgba(0,245,212,0.02) 50%, transparent 70%)',
+        pointerEvents: 'none',
       }} />
       {/* Faint purple — top-right */}
       <div aria-hidden="true" style={{
         position: 'absolute', top: '10%', right: '-5%',
-        width: '400px', height: '400px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(157,141,241,0.06) 0%, transparent 65%)',
-        filter: 'blur(50px)', pointerEvents: 'none',
+        width: '550px', height: '550px', borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(157,141,241,0.07) 0%, rgba(157,141,241,0.02) 50%, transparent 70%)',
+        pointerEvents: 'none',
       }} />
 
       {/* Marquee strip */}

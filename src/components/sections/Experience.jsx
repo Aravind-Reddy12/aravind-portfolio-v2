@@ -58,16 +58,16 @@ export function Experience() {
       {/* Ambient teal — top-right */}
       <div aria-hidden="true" style={{
         position: 'absolute', top: '5%', right: '-5%',
-        width: '500px', height: '500px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(0,245,212,0.06) 0%, transparent 65%)',
-        filter: 'blur(50px)', pointerEvents: 'none',
+        width: '650px', height: '650px', borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(0,245,212,0.07) 0%, rgba(0,245,212,0.02) 50%, transparent 70%)',
+        pointerEvents: 'none',
       }} />
       {/* Ambient yellow — bottom-left */}
       <div aria-hidden="true" style={{
         position: 'absolute', bottom: '5%', left: '-5%',
-        width: '400px', height: '400px', borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(255,194,71,0.05) 0%, transparent 65%)',
-        filter: 'blur(50px)', pointerEvents: 'none',
+        width: '550px', height: '550px', borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(255,194,71,0.06) 0%, rgba(255,194,71,0.02) 50%, transparent 70%)',
+        pointerEvents: 'none',
       }} />
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
 

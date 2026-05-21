@@ -18,7 +18,7 @@ export function ScrollProgressBar() {
       aria-hidden="true"
       style={{
         position: 'fixed', top: 0, left: 0, right: 0,
-        height: '2px', zIndex: 100,
+        height: '2px', zIndex: 202,
         background: 'var(--border-subtle)',
       }}
     >
