@@ -1,0 +1,284 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-bg-primary: #0A0A0F;
+  --color-bg-secondary: #12121A;
+  --color-bg-tertiary: #1A1A2E;
+  --color-bg-surface: #16213E;
+  --color-text-primary: #E8E8ED;
+  --color-text-secondary: #8888A0;
+  --color-text-muted: #55556A;
+  --color-accent-primary: #00F5D4;
+  --color-accent-secondary: #FF6B6B;
+  --color-accent-tertiary: #FFC247;
+  --color-accent-purple: #9D8DF1;
+
+  /* Spacing extensions */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+  --spacing-128: 32rem;
+
+  /* Font families */
+  --font-display: "Clash Display", "Syne", "Poppins", sans-serif;
+  --font-body: "Satoshi", "DM Sans", "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* ─── CSS Custom Properties ─────────────────────────────── */
+:root {
+  --bg-primary: #0A0A0F;
+  --bg-secondary: #12121A;
+  --bg-tertiary: #1A1A2E;
+  --bg-surface: #16213E;
+  --text-primary: #E8E8ED;
+  --text-secondary: #8888A0;
+  --text-muted: #55556A;
+  --accent-primary: #00F5D4;
+  --accent-secondary: #FF6B6B;
+  --accent-tertiary: #FFC247;
+  --accent-glow: rgba(0, 245, 212, 0.15);
+  --accent-glow-strong: rgba(0, 245, 212, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-accent: rgba(0, 245, 212, 0.3);
+  --gradient-hero: linear-gradient(135deg, #0A0A0F 0%, #16213E 50%, #0A0A0F 100%);
+  --gradient-card: linear-gradient(145deg, #1A1A2E 0%, #12121A 100%);
+  --gradient-accent: linear-gradient(135deg, #00F5D4, #00B4D8);
+}
+
+/* ─── Global Reset ──────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Satoshi", "DM Sans", "Outfit", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--accent-glow-strong);
+  color: var(--accent-primary);
+}
+
+/* ─── Custom Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-accent); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-primary); }
+
+/* ─── Focus ─────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+/* ─── Keyframes ─────────────────────────────────────────── */
+@keyframes float-blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -20px) scale(1.05); }
+  66%       { transform: translate(-20px, 15px) scale(0.95); }
+}
+
+@keyframes float-blob-alt {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(-25px, 20px) scale(0.95); }
+  66%       { transform: translate(20px, -15px) scale(1.05); }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px var(--accent-primary); }
+  50%       { box-shadow: 0 0 20px var(--accent-primary), 0 0 40px rgba(0,245,212,0.3); }
+}
+
+@keyframes chevron-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50%       { transform: translateY(6px); opacity: 1; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─── Utility Classes ───────────────────────────────────── */
+.font-display   { font-family: "Clash Display", "Syne", "Poppins", sans-serif; }
+.font-body      { font-family: "Satoshi", "DM Sans", "Outfit", sans-serif; }
+.font-code      { font-family: "JetBrains Mono", monospace; }
+
+.text-gradient {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-accent {
+  text-shadow: 0 0 20px var(--accent-glow-strong);
+}
+
+.blob-1 { animation: float-blob     8s ease-in-out infinite; }
+.blob-2 { animation: float-blob-alt 10s ease-in-out infinite; }
+.blob-3 { animation: float-blob     12s ease-in-out 2s infinite; }
+
+.marquee-track { animation: marquee 20s linear infinite; }
+
+.pulse-dot { animation: pulse-glow 2s ease-in-out infinite; }
+
+.chevron-anim { animation: chevron-bounce 1.5s ease-in-out infinite; }
+
+/* ─── Custom Cursor ─────────────────────────────────────── */
+@media (pointer: fine) {
+  body, a, button { cursor: none !important; }
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 6px; height: 6px;
+  margin-top: -3px; margin-left: -3px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  transition: opacity 0.2s, width 0.2s, height 0.2s, margin 0.2s;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 32px; height: 32px;
+  margin-top: -16px; margin-left: -16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 245, 212, 0.55);
+  pointer-events: none;
+  z-index: 9998;
+  will-change: left, top;
+  transition: width 0.25s ease, height 0.25s ease, margin 0.25s ease,
+              border-color 0.25s ease, background 0.25s ease, opacity 0.2s;
+}
+
+.cursor-dot.c-hover {
+  opacity: 0;
+  width: 0; height: 0;
+}
+
+.cursor-ring.c-hover {
+  width: 52px; height: 52px;
+  margin-top: -26px; margin-left: -26px;
+  border-color: var(--accent-primary);
+  background: rgba(0, 245, 212, 0.06);
+}
+
+/* ─── Typewriter cursor blink ───────────────────────────── */
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.85em;
+  background: var(--accent-primary);
+  margin-left: 3px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ─── Ambient orb drift animations ─────────────────────── */
+@keyframes orb-drift-a {
+  0%, 100% { transform: translate(0,     0)    scale(1);    }
+  25%       { transform: translate(80px, -60px) scale(1.08); }
+  50%       { transform: translate(-50px, 90px) scale(0.94); }
+  75%       { transform: translate(70px,  50px) scale(1.04); }
+}
+
+@keyframes orb-drift-b {
+  0%, 100% { transform: translate(0,      0)     scale(1);    }
+  33%       { transform: translate(-90px,  60px)  scale(1.1);  }
+  66%       { transform: translate(60px,  -80px)  scale(0.92); }
+}
+
+@keyframes orb-drift-c {
+  0%, 100% { transform: translate(0,    0)    scale(1);    }
+  40%       { transform: translate(70px, -70px) scale(1.06); }
+  80%       { transform: translate(-40px, 50px) scale(0.96); }
+}
+
+@keyframes orb-drift-d {
+  0%, 100% { transform: translate(0,      0)    scale(1);    }
+  50%       { transform: translate(-80px, -60px) scale(1.08); }
+}
+
+@keyframes orb-drift-e {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    }
+  25%       { transform: translate(calc(-50% + 60px), calc(-50% - 70px)) scale(1.1);  }
+  50%       { transform: translate(calc(-50% - 70px), calc(-50% + 50px)) scale(0.92); }
+  75%       { transform: translate(calc(-50% + 40px), calc(-50% + 80px)) scale(1.05); }
+}
+
+/* ─── Animated grid drift ───────────────────────────────── */
+@keyframes grid-drift {
+  from { background-position: 0px 0px; }
+  to   { background-position: 36px 36px; }
+}
+
+/* ─── Responsive: nav visibility ───────────────────────── */
+.nav-desktop { display: none; }
+.nav-mobile  { display: flex; }
+
+@media (min-width: 768px) {
+  .nav-desktop { display: flex; }
+  .nav-mobile  { display: none; }
+}
+
+/* ─── Responsive: section vertical padding ─────────────── */
+.section-pad    { padding: 7rem 1.5rem; }
+.section-pad-x0 { padding: 7rem 0; }
+
+@media (max-width: 767px) {
+  .section-pad    { padding: 4.5rem 1.5rem; }
+  .section-pad-x0 { padding: 4.5rem 0; }
+}
+
+/* ─── Responsive: modal padding ────────────────────────── */
+.modal-header-pad { padding: 2rem 2rem 1.5rem; }
+.modal-body-pad   { padding: 1.75rem 2rem; }
+
+@media (max-width: 600px) {
+  .modal-header-pad { padding: 1.25rem 1.25rem 1rem; }
+  .modal-body-pad   { padding: 1.25rem; }
+}
+
+/* ─── Mobile: hide experience meta separators ───────────── */
+@media (max-width: 480px) {
+  .meta-sep { display: none; }
+}
+
+/* ─── Mobile: footer & misc tweaks ─────────────────────── */
+@media (max-width: 600px) {
+  /* Ensure modal doesn't overflow viewport height */
+  .modal-scroll { max-height: 80vh; }
+
+  /* Skills marquee spacing */
+  .marquee-track { gap: 1.25rem; }
+}
