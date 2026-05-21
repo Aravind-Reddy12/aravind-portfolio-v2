@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 function GitHubIcon() {
@@ -34,7 +35,7 @@ export function ProjectModal({ project, onClose }) {
 
   const num = String(project.index + 1).padStart(2, '0');
 
-  return (
+  return createPortal(
     <AnimatePresence>
       <motion.div
         key="backdrop"
@@ -243,6 +244,7 @@ export function ProjectModal({ project, onClose }) {
           </div>
         </motion.div>
       </motion.div>
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }

@@ -10,50 +10,52 @@ export function GridBackground() {
         maskImage: 'radial-gradient(ellipse 85% 85% at 50% 50%, black 30%, transparent 100%)',
         WebkitMaskImage: 'radial-gradient(ellipse 85% 85% at 50% 50%, black 30%, transparent 100%)',
         animation: 'grid-drift 25s linear infinite',
+        willChange: 'background-position',
       }} />
 
       {/* ── Ambient orb 1 — teal, top-left ───────────────── */}
+      {/* Softness baked into gradient stops — no filter:blur needed */}
       <div style={{
         position: 'absolute',
         top: '-15vh', left: '-10vw',
-        width: '65vw', height: '65vw', maxWidth: '800px', maxHeight: '800px',
+        width: '80vw', height: '80vw', maxWidth: '900px', maxHeight: '900px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(0,245,212,0.28) 0%, transparent 65%)',
-        filter: 'blur(70px)',
+        background: 'radial-gradient(circle, rgba(0,245,212,0.22) 0%, rgba(0,245,212,0.08) 40%, transparent 70%)',
         animation: 'orb-drift-a 20s ease-in-out infinite',
+        willChange: 'transform',
       }} />
 
       {/* ── Ambient orb 2 — purple, right ────────────────── */}
       <div style={{
         position: 'absolute',
         top: '20vh', right: '-15vw',
-        width: '55vw', height: '55vw', maxWidth: '700px', maxHeight: '700px',
+        width: '65vw', height: '65vw', maxWidth: '800px', maxHeight: '800px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(157,141,241,0.24) 0%, transparent 65%)',
-        filter: 'blur(80px)',
+        background: 'radial-gradient(circle, rgba(157,141,241,0.18) 0%, rgba(157,141,241,0.06) 45%, transparent 70%)',
         animation: 'orb-drift-b 25s ease-in-out infinite',
+        willChange: 'transform',
       }} />
 
       {/* ── Ambient orb 3 — coral, bottom-left ──────────── */}
       <div style={{
         position: 'absolute',
         bottom: '5vh', left: '-8vw',
-        width: '48vw', height: '48vw', maxWidth: '600px', maxHeight: '600px',
+        width: '60vw', height: '60vw', maxWidth: '700px', maxHeight: '700px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(255,107,107,0.22) 0%, transparent 65%)',
-        filter: 'blur(75px)',
+        background: 'radial-gradient(circle, rgba(255,107,107,0.16) 0%, rgba(255,107,107,0.05) 45%, transparent 70%)',
         animation: 'orb-drift-c 18s ease-in-out infinite',
+        willChange: 'transform',
       }} />
 
       {/* ── Ambient orb 4 — amber, bottom-right ─────────── */}
       <div style={{
         position: 'absolute',
         bottom: '-10vh', right: '5vw',
-        width: '42vw', height: '42vw', maxWidth: '520px', maxHeight: '520px',
+        width: '55vw', height: '55vw', maxWidth: '620px', maxHeight: '620px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(255,194,71,0.2) 0%, transparent 65%)',
-        filter: 'blur(80px)',
+        background: 'radial-gradient(circle, rgba(255,194,71,0.15) 0%, rgba(255,194,71,0.05) 45%, transparent 70%)',
         animation: 'orb-drift-d 22s ease-in-out 3s infinite',
+        willChange: 'transform',
       }} />
 
       {/* ── Ambient orb 5 — cyan, center ─────────────────── */}
@@ -61,11 +63,11 @@ export function GridBackground() {
         position: 'absolute',
         top: '50%', left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '35vw', height: '35vw', maxWidth: '450px', maxHeight: '450px',
+        width: '45vw', height: '45vw', maxWidth: '550px', maxHeight: '550px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(0,180,216,0.14) 0%, transparent 65%)',
-        filter: 'blur(90px)',
+        background: 'radial-gradient(circle, rgba(0,180,216,0.1) 0%, rgba(0,180,216,0.03) 50%, transparent 70%)',
         animation: 'orb-drift-e 30s ease-in-out 1s infinite',
+        willChange: 'transform',
       }} />
 
       {/* ── Noise overlay ────────────────────────────────── */}

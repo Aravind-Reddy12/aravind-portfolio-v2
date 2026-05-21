@@ -39,21 +39,21 @@ export function Hero() {
       <div aria-hidden="true" style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
         <div ref={blob1} className="blob-1" style={{
           position: 'absolute', top: '10%', left: '15%',
-          width: '600px', height: '600px', borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(0,245,212,0.14) 0%, transparent 65%)',
-          filter: 'blur(40px)',
+          width: '700px', height: '700px', borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(0,245,212,0.12) 0%, rgba(0,245,212,0.04) 50%, transparent 70%)',
+          willChange: 'transform',
         }} />
         <div ref={blob2} className="blob-2" style={{
           position: 'absolute', bottom: '15%', right: '10%',
-          width: '500px', height: '500px', borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(157,141,241,0.12) 0%, transparent 65%)',
-          filter: 'blur(50px)',
+          width: '600px', height: '600px', borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(157,141,241,0.1) 0%, rgba(157,141,241,0.03) 50%, transparent 70%)',
+          willChange: 'transform',
         }} />
         <div ref={blob3} className="blob-3" style={{
           position: 'absolute', top: '55%', left: '45%',
-          width: '350px', height: '350px', borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,107,107,0.09) 0%, transparent 65%)',
-          filter: 'blur(40px)',
+          width: '420px', height: '420px', borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(255,107,107,0.08) 0%, rgba(255,107,107,0.02) 50%, transparent 70%)',
+          willChange: 'transform',
         }} />
       </div>
 

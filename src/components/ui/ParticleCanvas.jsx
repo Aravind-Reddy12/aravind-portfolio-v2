@@ -23,6 +23,7 @@ export function ParticleCanvas() {
   const rafRef    = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth < 768) return;
     const canvas = canvasRef.current;
     const ctx    = canvas.getContext('2d');
 
@@ -113,6 +114,7 @@ export function ParticleCanvas() {
         position: 'absolute', inset: 0,
         width: '100%', height: '100%',
         pointerEvents: 'none', zIndex: 1,
+        display: window.innerWidth < 768 ? 'none' : 'block',
       }}
     />
   );
